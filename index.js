@@ -1,5 +1,11 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+require('./modules/User');
 require('./services/passport');
+
+
+mongoose.connect(keys.mogoURI);
 
 const app = express();
 
